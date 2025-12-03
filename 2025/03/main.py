@@ -48,7 +48,7 @@ def part_2():
             digits.append(best_digit)
             start_index = next_index + 1
 
-        result += int("".join(d for d in digits))
+        result += int("".join(digits))
 
     print(f"Answer is {result}")
 
