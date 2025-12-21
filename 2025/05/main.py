@@ -38,8 +38,25 @@ def part_1():
 
 
 def part_2():
-    fresh_ranges, ingredient_IDs = get_input()
+    fresh_ranges, __ = get_input()
     result = 0
+
+    fresh_ranges.sort(key=lambda t: t[0])
+
+    merged_ranges = [fresh_ranges.pop(0)]
+
+    for rang in fresh_ranges:
+        if merged_ranges[-1][1] < rang[0]:
+            merged_ranges.append(rang)
+
+        else:
+            merged_ranges[-1] = (
+                merged_ranges[-1][0],
+                max(merged_ranges[-1][1], rang[1]),
+            )
+
+    for rang in merged_ranges:
+        result += rang[1] - rang[0] + 1
 
     print(f"Answer is {result}")
 

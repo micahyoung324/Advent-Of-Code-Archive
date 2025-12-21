@@ -118,5 +118,5 @@ All my solutions for past [Advent of Code](https://adventofcode.com) events. I a
 
 |[Day 1](2025/01/main.py)|[Day 2](2025/02/main.py)|[Day 3](2025/03/main.py)|[Day 4](2025/04/main.py)|
 | :---: | :---: | :---: | :---: |
-|[**Day 5**]|[**Day 6**]|[**Day 7**]|[**Day 8**]|
+|[**Day 5**](2025/05/main.py)|[**Day 6**]|[**Day 7**]|[**Day 8**]|
 |[**Day 9**]|[**Day 10**]|[**Day 11**]|[**Day 12**]|
