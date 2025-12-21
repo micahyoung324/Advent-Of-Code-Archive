@@ -1,7 +1,7 @@
 FILENAME = "input.txt"
 
-PAPER = '@'
-EMPTY = '.'
+PAPER = "@"
+EMPTY = "."
 
 
 def get_input() -> list[list[str]]:
@@ -29,30 +29,30 @@ def part_1():
             count = 0
 
             if y > 0:
-                if x > 0 and paper_diagram[y-1][x-1] == PAPER:
-                    count += 1
-                
-                if paper_diagram[y-1][x] == PAPER:
+                if x > 0 and paper_diagram[y - 1][x - 1] == PAPER:
                     count += 1
 
-                if x < MAX_X - 1 and paper_diagram[y-1][x+1] == PAPER:
+                if paper_diagram[y - 1][x] == PAPER:
+                    count += 1
+
+                if x < MAX_X - 1 and paper_diagram[y - 1][x + 1] == PAPER:
                     count += 1
 
             if y < MAX_Y - 1:
-                if x > 0 and paper_diagram[y+1][x-1] == PAPER:
-                    count += 1
-                
-                if paper_diagram[y+1][x] == PAPER:
+                if x > 0 and paper_diagram[y + 1][x - 1] == PAPER:
                     count += 1
 
-                if x < MAX_X - 1 and paper_diagram[y+1][x+1] == PAPER:
+                if paper_diagram[y + 1][x] == PAPER:
                     count += 1
 
-            if x > 0 and paper_diagram[y][x-1] == PAPER:
+                if x < MAX_X - 1 and paper_diagram[y + 1][x + 1] == PAPER:
                     count += 1
 
-            if x < MAX_X - 1 and paper_diagram[y][x+1] == PAPER:
-                    count += 1
+            if x > 0 and paper_diagram[y][x - 1] == PAPER:
+                count += 1
+
+            if x < MAX_X - 1 and paper_diagram[y][x + 1] == PAPER:
+                count += 1
 
             if count < 4:
                 result += 1
@@ -81,30 +81,30 @@ def part_2():
                 count = 0
 
                 if y > 0:
-                    if x > 0 and paper_diagram[y-1][x-1] == PAPER:
-                        count += 1
-                    
-                    if paper_diagram[y-1][x] == PAPER:
+                    if x > 0 and paper_diagram[y - 1][x - 1] == PAPER:
                         count += 1
 
-                    if x < MAX_X - 1 and paper_diagram[y-1][x+1] == PAPER:
+                    if paper_diagram[y - 1][x] == PAPER:
+                        count += 1
+
+                    if x < MAX_X - 1 and paper_diagram[y - 1][x + 1] == PAPER:
                         count += 1
 
                 if y < MAX_Y - 1:
-                    if x > 0 and paper_diagram[y+1][x-1] == PAPER:
-                        count += 1
-                    
-                    if paper_diagram[y+1][x] == PAPER:
+                    if x > 0 and paper_diagram[y + 1][x - 1] == PAPER:
                         count += 1
 
-                    if x < MAX_X - 1 and paper_diagram[y+1][x+1] == PAPER:
+                    if paper_diagram[y + 1][x] == PAPER:
                         count += 1
 
-                if x > 0 and paper_diagram[y][x-1] == PAPER:
+                    if x < MAX_X - 1 and paper_diagram[y + 1][x + 1] == PAPER:
                         count += 1
 
-                if x < MAX_X - 1 and paper_diagram[y][x+1] == PAPER:
-                        count += 1
+                if x > 0 and paper_diagram[y][x - 1] == PAPER:
+                    count += 1
+
+                if x < MAX_X - 1 and paper_diagram[y][x + 1] == PAPER:
+                    count += 1
 
                 if count < 4:
                     stop_flag = False

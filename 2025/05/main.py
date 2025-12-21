@@ -1,7 +1,7 @@
 FILENAME = "input.txt"
 
 
-def get_input() -> tuple[list[tuple[int,int]], list[int]]:
+def get_input() -> tuple[list[tuple[int, int]], list[int]]:
     fresh_ranges = list()
     ingredient_IDs = list()
 
@@ -16,8 +16,8 @@ def get_input() -> tuple[list[tuple[int,int]], list[int]]:
                 continue
 
             if range_flag:
-                fresh_ranges.append(tuple(map(int, line.split('-'))))
-                
+                fresh_ranges.append(tuple(map(int, line.split("-"))))
+
             else:
                 ingredient_IDs.append(int(line))
 
